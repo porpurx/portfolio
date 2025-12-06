@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!-- HEADER -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gilberto Teja - Portafolio</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+        <link href="assets/css/styles.css" rel="stylesheet" />
+    </head>
+    <!-- BODY -->
+    <body class="bg-gray-900 text-white font-sans">
+        <div class="container min-h-screen flex flex-col">
+            <canvas id="stars-bg"></canvas>
+            <!-- Header -->
+            <header class="flex items-center justify-between px-12 py-8 bg-opacity-100 border-b border-gray-800">
+                <div class="flex items-center space-x-2 animate-fade-in">
+
+                    <span class="text-2xl">
+                        <svg class="inline w-7 h-7 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+                        </svg>
+                    </span>
+
+                    <span class="font-bold text-2xl tracking-wide">
+                        Gilberto Teja
+                    </span>
+                </div>
+
+                <nav class="hidden md:flex space-x-10 text-lg">
+                    <a href="#home" class="nav-link hover:text-blue-400 transition-colors">Home</a>
+                    <a href="#about" class="nav-link hover:text-blue-400 transition-colors">About</a>
+                    <a href="#portfolio" class="nav-link hover:text-blue-400 transition-colors">Portfolio</a>
+                    <a href="#contact" class="nav-link hover:text-blue-400 transition-colors">Contact</a>
+                </nav>
+                <!-- Mobile menu, hidden by default -->
+                <nav id="mobileMenu" class="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-95 flex flex-col items-center justify-center space-y-8 text-2xl z-50 transition-transform transform -translate-y-full md:hidden">
+                    <a href="#home" class="nav-link hover:text-blue-400 transition-colors">Home</a>
+                    <a href="#about" class="nav-link hover:text-blue-400 transition-colors">About</a>
+                    <a href="#portfolio" class="nav-link hover:text-blue-400 transition-colors">Portfolio</a>
+                    <a href="#contact" class="nav-link hover:text-blue-400 transition-colors">Contact</a>
+                </nav>
+
+                <button class="md:hidden focus:outline-none">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </header>
+            <!-- Main Section -->
+            <main class="w-full bg-opacity-100">
+                <!-- home -->
+                <section id="home" class="w-full block px-4 md:px-12 py-10 md:py-16 min-h-screen section-scroll-animate">
+                    <div class="flex flex-col md:flex-row pt-16">
+                        <!-- Columna izquierda: título y descripción -->
+                        <div class="flex-1 flex flex-col justify-center items-start max-w-xl">
+                            <div class="h-1 w-24 bg-white mb-8"></div>
+                            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                                I'm Gilberto Teja,<br class="md:hidden" />
+                                <span class="block">
+                                    <span id="typewriter" class="text-blue-400"></span>
+                                </span>
+                            </h1>
+                            <p class="text-gray-300 text-lg mb-10">
+                                Welcome to my portfolio! I specialize in creating beautiful and functional websites using the latest web technologies. Explore my work and get to know more about me.
+                            </p>
+                            <a href="#about" class="nav-link inline-block bg-blue-500 hover:bg-blue-600 text-white rounded-full p-4 shadow-lg transition-transform transform hover:scale-110 animate-bounce mb-8" title="Ver más">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- Columna central: imagen de perfil -->
+                        <div class="flex-shrink-0 flex justify-center items-center md:mx-12">
+                            <img src="assets/images/model_1.jpg" alt="profile" class="object-cover w-72 h-80 rounded-lg shadow-2xl" />
+                        </div>
+                        <!-- Columna derecha: info adicional -->
+                        <div class="flex-1 flex flex-col justify-center items-start max-w-xs md:pl-8">
+                            <div class="mb-8">
+                                <h3 class="text-lg font-bold mb-2 tracking-widest">ABOUT ME</h3>
+                                <p class="text-gray-300 mb-6">
+                                    I'm a dedicated web developer with a passion for creating stunning and efficient web applications. With expertise in both front-end and back-end technologies, I strive to deliver exceptional user experiences.
+                                </p>
+                                <a href="#about" class="nav-link text-blue-400 font-semibold hover:underline flex items-center mb-8 transition-colors" >
+                                    LEARN MORE
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="mb-8">
+                                <h3 class="text-lg font-bold mb-2 tracking-widest">MY WORK</h3>
+                                <p class="text-gray-300 mb-6">
+                                    Take a look at my portfolio to see some of the projects I've worked on. From small business websites to complex web applications, I bring creativity and technical expertise to every project.
+                                </p>
+                                <a href="#portfolio" class="nav-link text-blue-400 font-semibold hover:underline flex items-center mb-8 transition-colors">
+                                    BROWSE PORTFOLIO
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- about -->
+                <section id="about" class="w-full block px-4 md:px-12 py-10 md:py-16 min-h-screen section-scroll-animate">
+                    <div class="flex flex-col md:flex-row items-center justify-center w-full min-h-screen" style="min-height:calc(100vh - 80px);">
+                        <!-- Columna izquierda: texto -->
+                        <div class="flex-1 flex flex-col justify-center items-start max-w-6xl">
+                            <div class="h-1 w-32 bg-white mb-8"></div>
+                            <h2 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">Nice to meet you,<br>I'm Gilberto Teja</h2>
+                            <p class="text-gray-300 text-lg mb-10">
+                                I'm a passionate web developer with experience in creating dynamic and responsive websites. I'm always eager to learn new technologies and improve my skills.
+                            </p>
+                            <hr class="border-gray-700 w-full mb-8">
+                            <div class="flex space-x-12">
+                                <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-12">
+                                    <!-- Columna Tech Stack -->
+                                    <div class="md:col-span-1">
+                                        <h3 class="text-xl font-bold mb-4 text-blue-400">Tech Stack</h3>
+                                        <div class="flex flex-wrap gap-6 items-center">
+                                            <!-- laravel -->
+                                            <span class="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-lg shadow text-white font-semibold">
+                                                <svg class="w-7 h-7" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M41 9.88889L33 5.44444L25 9.88889M41 9.88889L33 14.3333M41 9.88889V18.7778L33 23.2222M25 9.88889V18.7778M25 9.88889L33 14.3333M25 18.7778L33 23.2222M25 18.7778L9 27.6667M33 23.2222V32.1111L17 41M33 23.2222V14.3333M33 23.2222L17 32.1111M9 27.6667L17 32.1111M9 27.6667V9.88889M1 5.44444L9 1L17 5.44444M1 5.44444V32.1111L17 41M1 5.44444L9 9.88889M17 41V32.1111M9 9.88889L17 5.44444M17 5.44444V23.2222" stroke="#F53003" stroke-width="1.5"></path>
+                                                </svg>
+                                                <span>Laravel</span>
+                                            </span>
+                                            <!-- vue.js -->
+                                            <span class="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-lg shadow text-white font-semibold">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue" class="w-7 h-7" />
+                                                <span>Vue.js</span>
+                                            </span>
+                                            <!-- tailwind -->
+                                            <span class="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-lg shadow text-white font-semibold">
+                                                <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33"><g clip-path="url(#prefix__clip0)"><path fill="#38bdf8" fill-rule="evenodd" d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z" clip-rule="evenodd"/></g><defs><clipPath id="prefix__clip0"><path fill="#fff" d="M0 0h54v32.4H0z"/></clipPath></defs></svg>
+                                                <span>Tailwind</span>
+                                            </span>
+                                            <!-- javascript -->
+                                            <span class="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-lg shadow text-white font-semibold">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-7 h-7" />
+                                                <span>JavaScript</span>
+                                            </span>
+                                            <!-- html5 -->
+                                            <span class="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-lg shadow text-white font-semibold">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-7 h-7" />
+                                                <span>HTML5</span>
+                                            </span>
+                                            <!-- css3 -->
+                                            <span class="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-lg shadow text-white font-semibold">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-7 h-7" />
+                                                <span>CSS3</span>
+                                            </span>
+                                            <!-- postgresql -->
+                                            <span class="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-lg shadow text-white font-semibold">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="w-7 h-7" />
+                                                <span>PostgreSQL</span>
+                                            </span>
+                                            <!-- mysql -->
+                                            <div class="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-lg shadow text-white font-semibold">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-7 h-7" />
+                                                <span>MySQL</span>
+                                            </div>
+                                            <!-- api rest  -->
+                                            <div class="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-lg shadow text-white font-semibold">
+                                                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.09A1.65 1.65 0 0 0 9 3.6V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.09a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.09a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                                                    <circle cx="12" cy="12" r="3"/>
+                                                </svg>
+                                                <span>API REST</span>
+                                            </div>
+                                            <!-- scrum -->
+                                            <div class="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-lg shadow text-white font-semibold">
+                                                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.09A1.65 1.65 0 0 0 9 3.6V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.09a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.09a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                                                    <circle cx="12" cy="12" r="3"/>
+                                                </svg>
+                                                <span>SCRUM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Columna Experience -->
+                                    <div class="md:col-span-2">
+                                        <h3 class="text-xl font-bold mb-4 text-blue-400">Experience</h3>
+                                        <div class="space-y-6">
+                                            <div class="bg-gray-800 rounded-lg p-6 shadow flex flex-col md:flex-row md:items-center md:justify-between">
+                                                <div class="flex-1">
+                                                    <div>
+                                                        <span class="text-lg font-semibold text-white">Full-stack Developer</span>
+                                                        <span class="ml-2 text-gray-400">| Made In Web</span>
+                                                    </div>
+                                                    <div class="mt-2 text-gray-400 text-sm">Aug 2022 - Now</div>
+                                                    <div class="mt-2 text-gray-300 text-base">Extensive experience developing robust web applications using the Laravel framework, focused on building scalable and efficient server-side solutions.</div>
+                                                </div>
+                                            </div>
+                                            <div class="bg-gray-800 rounded-lg p-6 shadow flex flex-col md:flex-row md:items-center md:justify-between">
+                                                <div class="flex-1">
+                                                    <div>
+                                                        <span class="text-lg font-semibold text-white">Web Developer</span>
+                                                        <span class="ml-2 text-gray-400">| Dtona</span>
+                                                    </div>
+                                                    <div class="mt-2 text-gray-400 text-sm">Jul 2020 - 2022</div>
+                                                    <div class="mt-2 text-gray-300 text-base">Provided support for production platforms, implemented new modules, and delivered customer support.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- portfolio -->
+                <section id="portfolio" class="w-full block px-4 md:px-12 py-10 md:py-16 min-h-screen section-scroll-animate">
+                    <div class="max-w-5xl mx-auto w-full flex flex-col justify-center min-h-screen">
+                        <div class="h-1 w-64 bg-white mb-8 mx-auto"></div>
+                        <h2 class="text-5xl font-extrabold text-center mb-6 section-title">Portfolio</h2>
+                        <p class="text-gray-300 text-lg text-center mb-10 font-secondary section-content">
+                            Here are some of my recent projects. Feel free to explore and see the work I've done for various clients.
+                        </p>
+                        <div class="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0 justify-center items-stretch mb-10">
+                            <div class="project-card card">
+                                <!-- <img src="assets/images/project1.jpg" alt="Project 1" class="project-image" /> -->
+                                <div class="flex space-x-2 mb-2">
+                                    <span class="bg-gray-700 text-gray-200 px-4 py-1 rounded-lg text-sm font-semibold">Vue JS</span>
+                                    <span class="bg-gray-700 text-gray-200 px-4 py-1 rounded-lg text-sm font-semibold">Laravel</span>
+                                </div>
+                                <span class="text-lg font-bold text-gray-200 mb-2">Project 1</span>
+                                <p class="text-base text-contrast font-secondary mb-2">Description</p>
+                            </div>
+                            <div class="project-card card">
+                                <!-- <img src="assets/images/project2.jpg" alt="Project 2" class="project-image" /> -->
+                                <div class="flex space-x-2 mb-2">
+                                    <span class="bg-gray-700 text-gray-200 px-4 py-1 rounded-lg text-sm font-semibold">Laravel</span>
+                                    <span class="bg-gray-700 text-gray-200 px-4 py-1 rounded-lg text-sm font-semibold">JQuery</span>
+                                </div>
+                                <span class="text-lg font-bold text-gray-200 mb-2">Project 2</span>
+                                <p class="text-base text-contrast font-secondary mb-2">Description</p>
+                            </div>
+                            <div class="project-card card">
+                                <!-- <img src="assets/images/project3.jpg" alt="Project 3" class="project-image" /> -->
+                                <div class="flex space-x-2 mb-2">
+                                    <span class="bg-gray-700 text-gray-200 px-4 py-1 rounded-lg text-sm font-semibold">Tailwind</span>
+                                    <span class="bg-gray-700 text-gray-200 px-4 py-1 rounded-lg text-sm font-semibold">API REST</span>
+                                </div>
+                                <span class="text-lg font-bold text-gray-200 mb-2">Project 3</span>
+                                <p class="text-base text-contrast font-secondary mb-2">Description</p>
+                            </div>
+                        </div>
+                        <!-- <div class="bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 rounded-2xl p-8 flex-1 shadow-lg flex flex-col items-center justify-center border-2 border-dashed border-blue-400 opacity-80">
+                            <svg class="w-16 h-16 text-blue-400 mb-4 animate-pulse" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span class="text-2xl font-bold text-blue-400 mb-2">More Projects Coming Soon</span>
+                            <span class="text-gray-400 text-center font-secondary">Stay tuned for upcoming additions to my portfolio!</span>
+                        </div> -->
+                    </div>
+                </section>
+                <!-- contact -->
+                <section id="contact" class="w-full block px-4 md:px-12 py-10 md:py-16 min-h-screen section-scroll-animate">
+                    <div class="flex flex-col md:flex-row items-center justify-center w-full h-full min-h-screen">
+                        <!-- Columna izquierda: perfil y redes -->
+                        <div class="flex-1 flex flex-col justify-center items-start max-w-2xl px-2 md:px-6">
+                            <div class="flex items-center mb-6 md:mb-8">
+                                <img src="assets/images/model_1.jpg" alt="Gilberto Teja" class="w-32 h-32 rounded-full object-cover mr-6 shadow-lg border-4 border-gray-700">
+                                <div>
+                                    <h2 class="text-3xl md:text-4xl font-extrabold leading-tight mb-2 text-white">Gilberto Teja</h2>
+                                    <h3 class="text-lg md:text-xl font-medium text-gray-400 mb-2">Full Stack Developer</h3>
+                                    <p class="text-base text-gray-300 mb-2">
+                                        ¡Connect with me to collaborate on your next project!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex space-x-5 mb-8">
+                                <!-- facebook -->
+                                <a href="https://www.facebook.com/porpurx/" target="_blank" class="hover:text-blue-400 transition-colors" aria-label="Facebook">
+                                    <svg class="w-6 h-6 hover:scale-125 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24" title="Facebook">
+                                        <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24H12.82v-9.294H9.692V11.01h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.92.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.696h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0"/>
+                                    </svg>
+                                </a>
+                                <!-- X -->
+                                <a href="https://x.com/porpurx" target="_blank" class="hover:text-blue-400 transition-colors" aria-label="X">
+                                    <svg class="w-6 h-6 hover:scale-125 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24" title="X">
+                                        <path d="M17.53 2H21.5L14.36 10.09L22.75 21.5H16.44L11.38 14.62L5.77 21.5H1.8L9.34 12.93L1.25 2H7.73L12.29 8.32L17.53 2ZM16.41 19.68H18.23L7.7 4.39H5.77L16.41 19.68Z"/>
+                                    </svg>
+                                </a>
+                                <!-- instagram -->
+                                <a href="https://www.instagram.com/porpurx/" target="_blank" class="hover:text-blue-400 transition-colors" aria-label="Instagram">
+                                    <svg class="w-6 h-6 hover:scale-125 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24" title="Instagram">
+                                        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                    </svg>
+                                </a>
+                                <!-- linkedin -->
+                                <a href="https://www.linkedin.com/in/gilberto-teja-612b12275/" target="_blank" class="hover:text-blue-400 transition-colors" aria-label="LinkedIn">
+                                    <svg class="w-6 h-6 hover:scale-125 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24" title="LinkedIn">
+                                        <path d="M19 0h-14C2.2 0 1.99.2 1.99.44v23.12c0 .24.21.44.47.44h14c.26 0 .47-.2.47-.44V.44C19 .2 18.79 0 18.53 0zM6.75 20.25h-3v-9h3v9zm-1.5-10.25c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm13.25 10.25h-3v-4.5c0-1.07-.02-2.44-1.5-2.44-1.5 0-1.73 1.17-1.73 2.37v4.57h-3v-9h2.88v1.23h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v4.74z"/>
+                                    </svg>
+                                </a>
+                                <!-- youtube -->
+                                <a href="https://www.youtube.com/@porpurx" target="_blank" class="hover:text-blue-400 transition-colors" aria-label="YouTube">
+                                    <svg class="w-6 h-6 hover:scale-125 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24" title="YouTube">
+                                        <path d="M23.498 6.186a2.994 2.994 0 0 0-2.112-2.112C19.633 3.5 12 3.5 12 3.5s-7.633 0-9.386.574A2.994 2.994 0 0 0 .502 6.186C0 7.94 0 12 0 12s0 4.06.502 5.814a2.994 2.994 0 0 0 2.112 2.112C4.367 20.5 12 20.5 12 20.5s7.633 0 9.386-.574a2.994 2.994 0 0 0 2.112-2.112C24 16.06 24 12 24 12s0-4.06-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                    </svg>
+                                </a>
+                                <!-- github -->
+                                <a href="https://github.com/porpurx" target="_blank" class="hover:text-blue-400 transition-colors" aria-label="GitHub">
+                                    <svg class="w-6 h-6 hover:scale-125 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24" title="GitHub">
+                                        <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.51 2.87 8.34 6.84 9.69.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.17-1.1-1.48-1.1-1.48-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.38 9.38 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Columna derecha: contacto visual -->
+                        <div class="flex-2 flex flex-col justify-center items-center max-w-xl">
+                            <div class="bg-gray-800 rounded-2xl w-full h-full p-8 md:p-14 flex flex-col justify-center items-center shadow-2xl animate-fade-in min-w-[320px] max-w-xl border border-blue-500/30 backdrop-blur-md">
+                                <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-8 flex items-center text-center">
+                                    Get in touch
+                                </h2>
+                                <div class="w-full flex flex-col md:flex-row justify-center items-start gap-8">
+                                    <div class="w-full flex flex-col items-center">
+                                        <span class="text-sm md:text-base font-semibold text-gray-400 mb-1 tracking-widest flex items-center">
+                                            EMAIL ME:
+                                        </span>
+                                        <a href="mailto:tejagilberto@gmail.com" class="group text-xl md:text-2xl font-bold text-white flex items-center mb-2 relative focus:outline-none focus:ring-2 focus:ring-blue-400" aria-label="Enviar correo a tejagilberto@gmail.com">
+                                            <span class="bg-transparent rounded px-2 py-1 transition-colors duration-200 group-hover:bg-blue-500/30 underline decoration-blue-400 decoration-2">tejagilberto@gmail.com</span>
+                                            <svg class="w-6 md:w-7 h-6 md:h-7 ml-2 text-blue-500 group-hover:translate-x-1 transition-transform duration-200 animate-pulse" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7" />
+                                            </svg>
+                                        </a>
+                                        <span class="block w-full h-0.5 bg-blue-400 opacity-60 scale-x-100 transition-transform duration-300 origin-left mb-4"></span>
+                                        <span class="text-sm md:text-base font-semibold text-gray-400 mb-1 tracking-widest flex items-center">
+                                            CALL ME:
+                                        </span>
+                                        <a href="tel:+524461432243" class="group text-xl md:text-2xl font-bold text-white flex items-center mb-2 relative focus:outline-none focus:ring-2 focus:ring-blue-400" aria-label="Llamar al +52 446 143 2243">
+                                            <span class="bg-transparent rounded px-2 py-1 transition-colors duration-200 group-hover:bg-blue-500/30 underline decoration-blue-400 decoration-2">+52 446 143 2243</span>
+                                            <svg class="w-6 md:w-7 h-6 md:h-7 ml-2 text-blue-500 group-hover:translate-x-1 transition-transform duration-200 animate-pulse" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7" />
+                                            </svg>
+                                        </a>
+                                        <span class="block w-full h-0.5 bg-blue-400 opacity-60 scale-x-100 transition-transform duration-300 origin-left"></span>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Botón flotante para volver a Home -->
+                <button id="backToHomeBtn" class="fixed bottom-8 right-8 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-4 shadow-lg transition-transform transform hover:scale-110 z-50 " title="Volver al inicio">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                    </svg>
+                </button>
+            </main>
+        </div>
+
+    <!-- Footer profesional -->
+    <footer class="bg-opacity-95 text-gray-400 text-center p-4 mt-8">
+        <div>
+            &copy; 2025 Gilberto Teja. All rights reserved.
+        </div>
+    </footer>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/stars.js"></script>
+        <script>
+        // Typewriter animation for 'a Full Stack Developer'
+        const typewriterElement = document.getElementById('typewriter');
+        const words = ["a Full Stack Developer", "a Web Enthusiast", "a Problem Solver"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 90;
+        let pauseTime = 1200;
+
+        function type() {
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+                charIndex--;
+                typewriterElement.textContent = currentWord.substring(0, charIndex);
+            } else {
+                charIndex++;
+                typewriterElement.textContent = currentWord.substring(0, charIndex);
+            }
+
+            let delay = typingSpeed;
+            if (!isDeleting && charIndex === currentWord.length) {
+                delay = pauseTime;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                delay = 500;
+            }
+            setTimeout(type, delay);
+        }
+        if(typewriterElement) type();
+        </script>
+</body>
+</html>
